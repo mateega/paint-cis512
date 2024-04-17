@@ -1,38 +1,65 @@
 .App {
   text-align: center;
+  font-family: 'Arial', sans-serif;
+  margin-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+canvas {
+  border: 2px solid #666;
+  border-radius: 8px;
+  margin-top: 20px;
+  width: 80%; /* adjust width as per design requirement */
+  height: 70vh; /* limits the height to 70% of the viewport height */
+  max-height: 600px; /* additional constraint to ensure it doesn't get too tall on larger screens */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.controls {
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="color"],
+input[type="range"],
+button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="color"] {
+  padding: 0;
+  height: 40px;
+  width: 60px;
+}
+
+input[type="range"] {
+  cursor: pointer;
+}
+
+button {
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e2e2e2;
+}
+
+button:active {
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
 }
